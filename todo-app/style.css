@@ -1,0 +1,32 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 100vh;
+  width: 100vw;
+}
+h1 {
+  text-align: center;
+}
+form {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  cursor: pointer;
+}
