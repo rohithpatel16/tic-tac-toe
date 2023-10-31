@@ -46,6 +46,7 @@ export default class View {
     icon.classList.add("fa-solid", player.iconClass, player.colorClass);
     squareEl.replaceChildren(icon);
   }
+
   setTurnIndicator(player) {
     const icon = document.createElement("i");
     const label = document.createElement("p");
@@ -79,6 +80,16 @@ export default class View {
   clearMoves() {
     this.$$.squares.forEach((square) => {
       square.replaceChildren();
+    });
+  }
+
+  intializeMoves(moves) {
+    this.$$.squares.forEach((square) => {
+      const existingMove = moves.find((move) => move.squareId === +square.id);
+
+      if (existingMove) {
+        this.handlePlayerMove(square, existingMove.player);
+      }
     });
   }
 
